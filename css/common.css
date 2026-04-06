@@ -34,3 +34,15 @@ body {
 a {
   color: inherit;
 }
+
+.site-icon {
+  display: inline-block;
+  line-height: 1;
+  font-style: normal;
+  font-family:
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+    sans-serif;
+}

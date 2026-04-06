@@ -72,6 +72,13 @@
   min-width: 12rem;
 }
 
+.site-icon--screen {
+  display: block;
+  margin: 0 auto 0.2rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  filter: drop-shadow(0 4px 18px rgba(232, 197, 71, 0.22));
+}
+
 .screen-eyebrow {
   margin: 0;
   font-size: 0.7rem;

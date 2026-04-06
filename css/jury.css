@@ -64,6 +64,12 @@
   letter-spacing: 0.06em;
 }
 
+.site-icon--jury {
+  margin-right: 0.2em;
+  font-size: 0.95em;
+  vertical-align: 0.05em;
+}
+
 .jury-hint {
   margin: 0.5rem 0 0;
   font-size: 0.95rem;

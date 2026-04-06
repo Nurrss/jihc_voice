@@ -5,7 +5,7 @@
   var maxJury =
     window.VoiceVoteSync && window.VoiceVoteSync.JURY_COUNT
       ? window.VoiceVoteSync.JURY_COUNT
-      : 5;
+      : 4;
   if (juryId < 1 || juryId > maxJury) {
     window.location.href = "index.html";
     return;

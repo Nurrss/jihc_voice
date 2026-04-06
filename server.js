@@ -6,7 +6,7 @@ var express = require("express");
 var WebSocket = require("ws");
 
 var PORT = parseInt(process.env.PORT || "3000", 10);
-var JURY_COUNT = 5;
+var JURY_COUNT = 4;
 
 function defaultVotes() {
   var v = {};

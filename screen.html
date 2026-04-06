@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Results — Voice Competition Voting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+  </head>
+  <body class="page-screen">
+    <div class="screen-bg" aria-hidden="true"></div>
+    <header class="screen-header">
+      <a class="screen-back" href="index.html">← Home</a>
+      <div class="screen-title-block">
+        <p class="screen-eyebrow">Live results</p>
+        <h1 class="screen-title">Voice Competition</h1>
+      </div>
+      <button type="button" class="screen-remove-votes" id="btn-remove-votes">
+        Remove votes
+      </button>
+    </header>
+    <main class="screen-grid" id="screen-grid" aria-live="polite">
+      <article class="screen-card" data-jury="1">
+        <h2 class="screen-card-label">Jury 1</h2>
+        <p class="screen-card-vote" data-role="vote">Awaiting vote</p>
+      </article>
+      <article class="screen-card" data-jury="2">
+        <h2 class="screen-card-label">Jury 2</h2>
+        <p class="screen-card-vote" data-role="vote">Awaiting vote</p>
+      </article>
+      <article class="screen-card" data-jury="3">
+        <h2 class="screen-card-label">Jury 3</h2>
+        <p class="screen-card-vote" data-role="vote">Awaiting vote</p>
+      </article>
+      <article class="screen-card" data-jury="4">
+        <h2 class="screen-card-label">Jury 4</h2>
+        <p class="screen-card-vote" data-role="vote">Awaiting vote</p>
+      </article>
+    </main>
+    <script src="js/sync.js"></script>
+    <script src="js/screen.js"></script>
+  </body>
+</html>

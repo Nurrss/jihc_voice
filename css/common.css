@@ -1,0 +1,36 @@
+:root {
+  --blue-deep: #0a1628;
+  --blue-mid: #132a4a;
+  --blue-light: #1e3a5f;
+  --gold: #e8c547;
+  --gold-dim: #b8942e;
+  --purple: #6b4ee6;
+  --red-vote: #c42b3a;
+  --green-vote: #1f9d6c;
+  --text: #f4f2eb;
+  --text-muted: #9aa8c4;
+  --font-display: "Bebas Neue", "Impact", sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--blue-deep);
+}
+
+a {
+  color: inherit;
+}

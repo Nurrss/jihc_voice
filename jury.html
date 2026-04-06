@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jury — Voice Competition Voting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/jury.css" />
+  </head>
+  <body class="page-jury">
+    <div class="jury-bg" aria-hidden="true"></div>
+    <main class="jury-main">
+      <a class="jury-back" href="index.html">← Home</a>
+      <header class="jury-header">
+        <p class="jury-label">Your vote</p>
+        <h1 class="jury-title" id="jury-title">Jury</h1>
+        <p class="jury-hint">Tap Yes or No</p>
+      </header>
+      <div
+        class="jury-toggle-bar"
+        id="jury-toggle"
+        role="group"
+        aria-label="Cast vote"
+      >
+        <button type="button" class="jury-opt jury-opt-yes" data-value="yes" id="btn-yes">
+          Yes
+        </button>
+        <button type="button" class="jury-opt jury-opt-no" data-value="no" id="btn-no">
+          No
+        </button>
+      </div>
+      <p class="jury-confirm" id="jury-confirm" role="status" aria-live="polite"></p>
+      <p class="jury-status">
+        <span class="jury-status-dot" id="jury-sync-dot" aria-hidden="true"></span>
+        <span id="jury-sync-text">Ready</span>
+      </p>
+    </main>
+    <script src="js/sync.js"></script>
+    <script src="js/jury.js"></script>
+  </body>
+</html>

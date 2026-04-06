@@ -1,0 +1,175 @@
+.page-jury {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.jury-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(232, 197, 71, 0.12), transparent 55%),
+    linear-gradient(180deg, #0a1628 0%, #101f36 100%);
+  z-index: 0;
+}
+
+.jury-main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  max-width: 28rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.jury-back {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.jury-back:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.jury-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.jury-label {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.jury-title {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 10vw, 3rem);
+  letter-spacing: 0.06em;
+}
+
+.jury-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.jury-toggle-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 5.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.jury-opt {
+  margin: 0;
+  padding: 1rem 0.75rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: clamp(1.35rem, 6vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  transition:
+    transform 0.1s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jury-opt:active {
+  transform: scale(0.98);
+}
+
+.jury-opt:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+  z-index: 1;
+}
+
+.jury-opt-yes {
+  background: linear-gradient(145deg, #1a7a58 0%, var(--green-vote) 100%);
+}
+
+.jury-opt-no {
+  background: linear-gradient(145deg, #9e2430 0%, var(--red-vote) 100%);
+}
+
+.jury-opt.is-selected {
+  filter: brightness(1.12);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+.jury-opt:not(.is-selected) {
+  filter: brightness(0.82);
+  opacity: 0.92;
+}
+
+.jury-confirm {
+  margin: 1.25rem 0 0;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(232, 197, 71, 0.1);
+  border: 1px solid rgba(232, 197, 71, 0.25);
+  border-radius: 0.75rem;
+  min-height: 3rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.jury-confirm.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.jury-status {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.jury-status-dot {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: var(--text-muted);
+  vertical-align: middle;
+}
+
+.jury-status-dot.is-live {
+  background: var(--green-vote);
+  box-shadow: 0 0 8px var(--green-vote);
+}

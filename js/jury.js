@@ -2,7 +2,11 @@
   var params = new URLSearchParams(window.location.search);
   var idRaw = params.get("id");
   var juryId = parseInt(idRaw, 10);
-  if (juryId !== 1 && juryId !== 2 && juryId !== 3 && juryId !== 4) {
+  var maxJury =
+    window.VoiceVoteSync && window.VoiceVoteSync.JURY_COUNT
+      ? window.VoiceVoteSync.JURY_COUNT
+      : 5;
+  if (juryId < 1 || juryId > maxJury) {
     window.location.href = "index.html";
     return;
   }

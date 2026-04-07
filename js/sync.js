@@ -1,7 +1,7 @@
 (function () {
   var STORAGE_KEY = "voiceCompetitionVotes_v1";
   var BC_NAME = "voice-votes";
-  var JURY_COUNT = 4;
+  var JURY_COUNT = 5;
 
   function defaultVotes() {
     var v = {};
